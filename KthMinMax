@@ -1,0 +1,19 @@
+import java.util.Arrays;
+
+public class KthMinMax {
+
+    public static void main(String[] args) {
+        int[] arr = {7, 10, 4, 3, 20, 15};
+        int k = 3;
+
+        // Step 1: Sort the array
+        Arrays.sort(arr);
+
+        // Step 2: Kth Min is at index k-1, Kth Max is at index arr.length - k
+        int kthMin = arr[k - 1];
+        int kthMax = arr[arr.length - k];
+
+        System.out.println(k + "rd Min = " + kthMin);
+        System.out.println(k + "rd Max = " + kthMax);
+    }
+}
